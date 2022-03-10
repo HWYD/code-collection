@@ -36,9 +36,19 @@ function unique4(arr) {
   return Array.from(new Set(arr))
 }
 
+//第五种
+function unique5(arr) {
+  return arr.reduce((res,cur)=>{
+    if(res.indexOf(cur) === -1){
+      res.push(cur)
+    }
+    return res
+  },[])
+}
+
 //测试代码
 const testArr = [1, 3, 2, 3, 5, 77, 6, 9, 4, 9]
-console.log(unique4(testArr))
+console.log(unique5(testArr))
 
 //分割符 -------------------------------------------------------
 
