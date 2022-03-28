@@ -1,5 +1,5 @@
 // 时间复杂度:
-// 最佳: T(n) = O(nlogn), 最差: Tn = (O^2), 平均: Tn = O(nlogn)
+// 最佳: T(n) = O(nlogn), 最差: Tn = O(n^2), 平均: Tn = O(nlogn)
 
 const quickSort = (arr) => {
   if (arr.length <= 1) {

@@ -16,7 +16,7 @@ function unique1(arr) {
 
 //第二种
 function unique2(arr) {
-  arr - arr.sort()
+  arr = arr.sort()
   let res = []
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== arr[i - 1]) {
@@ -38,12 +38,12 @@ function unique4(arr) {
 
 //第五种
 function unique5(arr) {
-  return arr.reduce((res,cur)=>{
-    if(res.indexOf(cur) === -1){
+  return arr.reduce((res, cur) => {
+    if (res.indexOf(cur) === -1) {
       res.push(cur)
     }
     return res
-  },[])
+  }, [])
 }
 
 //测试代码
