@@ -6,12 +6,10 @@
 
 const ObjectFactory = function (...args) {
   const obj = {}
-  console.log(args.length)
   const construct = [].shift.call(args)
-  console.log(args.length)
   obj.__proto__ = construct.prototype
-  const ret = construct.apply(obj,args)
-  return typeof ret === 'object'? ret : obj
+  const ret = construct.apply(obj, args)
+  return typeof ret === 'object' ? ret : obj
 }
 
 //测试代码
@@ -27,4 +25,4 @@ const TMap = function (options) {
 
 // console.log(map)
 
-console.log(ObjectFactory(TMap,{name:'tname',address:'st'}))
+console.log(ObjectFactory(TMap, { name: 'tname', address: 'st' }))
