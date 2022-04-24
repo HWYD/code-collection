@@ -8,6 +8,14 @@ Function.prototype.bindFn = function () {
   }
 }
 
+//写法2
+Function.prototype.bindFn1 = function (obj, ...args) {
+  const fn = this
+  return function (...arg1) {
+    fn.apply(obj, [...args, ...arg1])
+  }
+}
+
 //测试
 function origin(a, b) {
   console.log(this.name)
