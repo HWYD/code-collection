@@ -5,20 +5,17 @@ export const request = createAxiosInstance()
 // 创建axios实例并配置
 function createAxiosInstance() {
   const instance = axios.create({
-    baseURL:
-      process.env.NODE_ENV === 'development'
-        ? 'http://127.0.0.1:10012/'
-        : 'https://ysdl-3d.com/',
+    baseURL: process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:10012/' : '',
     timeout: 10000,
     headers: {
       // 定义统一的请求头部
       post: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       put: {
-        'Content-Type': 'application/json',
-      },
-    },
+        'Content-Type': 'application/json'
+      }
+    }
   })
   responseinterceptors(instance)
   return instance
